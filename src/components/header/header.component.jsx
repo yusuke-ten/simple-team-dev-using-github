@@ -12,9 +12,9 @@ import { createStructuredSelector } from 'reselect';
 
 const Header = ({ currentUser, hidden }) => (
     <div className="header">
-        <Link className="logo-container" to="/">
+        <div>
             <Logo className="logo" />
-        </Link>
+        </div>
         <div className="options">
             <Link className="option" to="/shop">SHOP</Link>
             <Link className="option" to="/contact">CONTACT</Link>
