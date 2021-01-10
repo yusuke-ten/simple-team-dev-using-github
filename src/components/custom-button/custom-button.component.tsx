@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './custom-button.styles.scss';
 
-const CustomButton = ({
+interface Props extends React.HTMLProps<HTMLButtonElement> {
+  children: ReactNode;
+  isGoogleSignIn: boolean;
+  inverted: boolean;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+const CustomButton: React.FC<Props> = ({
   children,
   isGoogleSignIn,
   inverted,
