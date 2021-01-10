@@ -8,12 +8,12 @@ interface Props extends React.HTMLProps<HTMLButtonElement> {
   type?: 'button' | 'submit' | 'reset';
 }
 
-const CustomButton = ({
+const CustomButton: React.FC<Props> = ({
   children,
   isGoogleSignIn,
   inverted,
   ...otherProps
-}: Props): ReactNode => (
+}) => (
   <button
     className={`${inverted ? 'inverted' : ''}${
       isGoogleSignIn ? 'google-sign-in' : ''
